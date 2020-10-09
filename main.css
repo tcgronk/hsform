@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+
+}
+main{
+    width: 100%;
+}
+h1,h2, h3{
+    text-align: center;
+}
+input,label,button{
+    width: 200px;
+    margin: 5px auto;
+}
+#contactForm{
+    margin: 5px auto;
+    width: 80%;
+    height: 500px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+.hidden{
+    display: none
+}
