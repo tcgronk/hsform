@@ -5,7 +5,7 @@ function hubspotForm(){
         event.preventDefault();
         document.getElementById("submitForm").onclick = function() {
             _hsq.push(["trackEvent", {
-                id: "Clicked Submit Form"
+                id: "HSFormSubmit"
             }]);
         };
         $("#formResponse").removeClass("hidden").text("Form Submitted")
