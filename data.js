@@ -3,7 +3,7 @@
 function hubspotForm(){
     $("#contactForm").submit(event=>{
         event.preventDefault();
-        document.getElementById("submitForm").onclick = function() {
+        document.getElementById("contactForm").onclick = function() {
             _hsq.push(["trackEvent", {
                 id: "HSFormSubmit"
             }]);
