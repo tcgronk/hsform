@@ -12,7 +12,7 @@ function hubspotForm(){
 }
 
 function apiTest(){
-    $.post( "https://js.hs-banner.com/8612571.js",function(){
+    $.post( "https://forms.hubspot.com/collected-forms/submit/form",function(){
         alert("success")
     })
 }
