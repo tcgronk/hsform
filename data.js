@@ -1,16 +1,22 @@
 "use strict";
 
+const { validate } = require("json-schema");
+
 function hubspotForm(){
     $("#contactForm").submit(event=>{
         event.preventDefault();
-        addContact(event.target.firstname.value, event.target.email.value, event.target.phone.value)
-        $("#formResponse").removeClass("hidden").text("Form Submitted")
+        validate(event);
+
 
     })
     
 
 }
+function validate(event){
 
+    addContact(event.target.firstname.value, event.target.email.value, event.target.phone.value)
+    $("#formResponse").removeClass("hidden").text("Form Submitted")
+}
 function addContact(firstname, email, phone){
         return fetch("http://localhost:8000", {
           method: "POST",
