@@ -3,6 +3,7 @@
 function hubspotForm() {
   $("#contactForm").submit((event) => {
     event.preventDefault();
+    console.log("validating")
     validate(event);
   });
 }
@@ -24,6 +25,7 @@ function validate(event) {
   }
 }
 function addContact(firstname, email, phone) {
+    console.log("attempting to add")
   return fetch("http://localhost:8000", {
     method: "POST",
     headers: {
