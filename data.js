@@ -4,16 +4,16 @@ function hubspotForm(){
     $("#contactForm").submit(event=>{
         event.preventDefault();
         validate(event);
-
+        
 
     })
-    
-
 }
 function validate(event){
-
-    addContact(event.target.firstname.value, event.target.email.value, event.target.phone.value)
-    $("#formResponse").removeClass("hidden").text("Form Submitted")
+    if(event.target.phone.value.length<10){
+        $("#formResponse").removeClass("hidden").text("Form not submitted, please see phone number for errors")
+    }
+    else{addContact(event.target.firstname.value, event.target.email.value, event.target.phone.value)
+    $("#formResponse").removeClass("hidden").text("Form Submitted")}
 }
 function addContact(firstname, email, phone){
         return fetch("http://localhost:8000", {
