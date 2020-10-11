@@ -1,7 +1,5 @@
 "use strict";
 
-const { validate } = require("json-schema");
-
 function hubspotForm(){
     $("#contactForm").submit(event=>{
         event.preventDefault();
