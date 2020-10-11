@@ -1,31 +1,35 @@
 "use strict";
 
+let valid=false;
+
 function hubspotForm() {
   $("#contactForm").submit((event) => {
     event.preventDefault();
-    console.log("validating")
+    console.log("Validating")
     validate(event);
+    console.log(`Form data is valid: ${valid}`)
+    if(valid===true){
+        addContact(
+            event.target.firstname.value,
+            event.target.email.value,
+            event.target.phone.value
+          );
+    }
+    
   });
 }
 function validate(event) {
   if (event.target.phone.value.length < 10) {
       console.log("under 10")
+      valid=false
     $("#formResponse")
       .removeClass("hidden")
       .text("Form not submitted, please see phone number for errors");
-    hubspotForm();
   } else {
-    console.log("Over 10") 
-    addContact(
-      event.target.firstname.value,
-      event.target.email.value,
-      event.target.phone.value
-    );
-    $("#formResponse").removeClass("hidden").text("Form Submitted");
+      valid=true   
   }
 }
 function addContact(firstname, email, phone) {
-    console.log("attempting to add")
   return fetch("http://localhost:8000", {
     method: "POST",
     headers: {
@@ -37,8 +41,12 @@ function addContact(firstname, email, phone) {
       phone,
     }),
   }).then((response) => {
-    console.log(response.json());
-  });
+    $("#formResponse").removeClass("hidden").text("Form Submitted");
+}).catch(
+    $("#formResponse")
+    .removeClass("hidden")
+    .text("Form not submitted, please check for errors")
+  )
 }
 
 function createApp() {
