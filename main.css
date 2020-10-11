@@ -50,7 +50,7 @@ header{
 .formButtons{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 25%;
     margin: 0 auto;
 }

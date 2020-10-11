@@ -27,10 +27,10 @@ function addContact(firstname, email, phone) {
     }),
   }).then((response) => {
       if(response.ok===true){
-    $("#formResponse").removeClass("hidden").text("Form Submitted");
+      $("#formResponse").removeClass("hidden").text("Form Submitted");
       }else {
         $("#formResponse")
-        .removeClass("hidden").delay(4000)
+        .removeClass("hidden")
         .text("Error with submission. Please try again")
       }
 }).catch(
