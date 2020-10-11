@@ -46,3 +46,9 @@ header{
     padding: 8px;
     margin: 15px auto;
 }
+.formButtons{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    margin: 0 auto;
+}

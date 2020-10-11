@@ -70,13 +70,20 @@
     </header>
     <main>
       <form id="contactForm" class="border">
-        <label for="firstname">First Name:</label>
-        <input type="text" name="firstname" required />
+        <label for="firstname">Name:</label>
+        <input class='input' type="text" name="firstname" required />
+        <label for="lastname">Last Name:</label>
+        <input class='input' type="text" name="lastname" required />
         <label for="email">Email Address:</label>
-        <input type="email" name="email" required />
+        <input class='input' type="email" name="email" required />
         <label for="phone">Phone Number: </label>
-        <input type="tel" name="phone" required />
+        <input class='input' type="tel" name="phone" required />
+        <label for="company">Company Name: </label>
+        <input class='input' type="text" name="company" required />
+        <div class='formButtons'>
         <button type="submit">Submit</button>
+        <button id='reset' type="button" >Reset</button>
+      </div>
       </form>
       <h3 id="formResponse" class="hidden"></h3>
     </main>
