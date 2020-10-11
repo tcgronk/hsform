@@ -1,12 +1,15 @@
 *{
     box-sizing: border-box;
-
+    font-family: 'Roboto', sans-serif;
 }
 main{
     width: 100%;
 }
 h1,h2, h3{
     text-align: center;
+}
+label{
+    color: white
 }
 input,label,button{
     width: 200px;
@@ -16,15 +19,30 @@ input,label,button{
     margin: 5px auto;
     width: 80%;
     height: 500px;
-    background-color: #425B76;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-   
+    background: linear-gradient(64deg, #43a5bd, #4bb1b2, #50b9a9);
 }
 .hidden{
     display: none
 }
 .border{
     border-radius: 15px;
+}
+
+button{
+    border: 1px #F07857 solid;
+    border-radius: 2px;
+    width: 75px;
+    color: white;
+    font-size: 20px;
+    background-color: #F07857;
+}
+header{
+    background-color: #425B76;
+    color: white;
+    width: 80%;
+    padding: 8px;
+    margin: 15px auto;
 }

@@ -5,16 +5,12 @@ let valid=false;
 function hubspotForm() {
   $("#contactForm").submit((event) => {
     event.preventDefault();
-    // console.log("Validating")
-    // validate(event);
-    // console.log(`Form data is valid: ${valid}`)
-    // if(valid===true){
+
         addContact(
             event.target.firstname.value,
             event.target.email.value,
             event.target.phone.value
           );
-    // }
     
   });
 }
@@ -30,8 +26,6 @@ function addContact(firstname, email, phone) {
       phone,
     }),
   }).then((response) => {
-      console.log(response)
-      console.log(response.error)
       if(response.ok===true){
     $("#formResponse").removeClass("hidden").text("Form Submitted");
       }else {
@@ -46,6 +40,9 @@ function addContact(firstname, email, phone) {
     
   )
 }
+
+
+
 
 function createApp() {
   hubspotForm();

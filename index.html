@@ -5,35 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" conent="ie-edge" />
     <title>HubSpot App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="data.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicon.ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicon.ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon.ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicon.ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon.ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon.ico/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png" />
+    <link rel="manifest" href="favicon.ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <script
-  type="text/javascript"
-  id="hs-script-loader"
-  async
-  defer
-  src="//js.hs-scripts.com/8612571.js"
-></script>
-<!-- End of HubSpot Embed Code -->
+    type="text/javascript"
+    id="hs-script-loader"
+    async
+    defer
+    src="//js.hs-scripts.com/8612571.js"
+  ></script>
+  <!-- End of HubSpot Embed Code -->
   <body>
-    <header>
-      <h1>Want to partner with us? </h1>
+    <header class="border">
+      <h1>Want to partner with us?</h1>
+      <h2>Submit your vendor contact info below</h2>
     </header>
     <main>
-      <h2>Submit your vendor contact info below</h2>
       <form id="contactForm" class="border">
         <label for="firstname">First Name:</label>
         <input type="text" name="firstname" required />
         <label for="email">Email Address:</label>
         <input type="email" name="email" required />
-        <label for="phone">Phone Number:</label>
+        <label for="phone">Phone Number: </label>
         <input type="tel" name="phone" required />
         <button type="submit">Submit</button>
       </form>
       <h3 id="formResponse" class="hidden"></h3>
     </main>
-
   </body>
 </html>
