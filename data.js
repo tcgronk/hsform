@@ -28,10 +28,9 @@ function addContact(firstname, email, phone) {
   }).then((response) => {
       if(response.ok===true){
     $("#formResponse").removeClass("hidden").text("Form Submitted");
-    $("input").empty()
       }else {
         $("#formResponse")
-        .removeClass("hidden")
+        .removeClass("hidden").delay(4000)
         .text("Error with submission. Please try again")
       }
 }).catch(
