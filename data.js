@@ -3,6 +3,8 @@
 let valid = false;
 
 function hubspotForm() {
+  $(".input").change(function(){
+    $("#formResponse").text("").addClass("hidden")});
   $("#contactForm").submit((event) => {
     event.preventDefault();
 
