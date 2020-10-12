@@ -31,14 +31,14 @@ function addContact(firstname,lastname, email, phone,  company) {
     }),
   })
   .then((response) => {
-    console.log(response)
-    if (response.ok) {
-      $("#formResponse").removeClass("hidden").text("Form Submitted");
-    } else{
+    if (!response.ok) {
       $("#formResponse")
-        .removeClass("hidden")
-        .text("Error with submission. Please try again");
-          }
+      .removeClass("hidden")
+      .text("Error with submission. Please try again");
+        
+    } else{
+      $("#formResponse").removeClass("hidden").text("Form Submitted");
+    }
   })
     .catch(error=>{
       $("#formResponse")
