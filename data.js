@@ -26,15 +26,7 @@ function addContact(firstname, email, phone) {
     }),
   })
     .then((response) => {
-      if (response.ok === true) {
-        console.log("true")
         $("#formResponse").removeClass("hidden").text("Form Submitted");
-      } else{
-        console.log("false")
-        $("#formResponse")
-          .removeClass("hidden")
-          .text("Error with submission. Please try again");
-            }
     })
     .catch(error=>{
       $("#formResponse")
