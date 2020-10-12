@@ -1,6 +1,5 @@
 "use strict";
 
-let valid = false;
 
 function hubspotForm() {
   $(".input").change(function(){
@@ -10,12 +9,14 @@ function hubspotForm() {
 
     addContact(
       event.target.firstname.value,
+      event.target.lastname.value,
       event.target.email.value,
-      event.target.phone.value
+      event.target.phone.value,
+      event.target.company.value,
     );
   });
 }
-function addContact(firstname, email, phone) {
+function addContact(firstname,lastname, email, phone,  company) {
   return fetch("http://localhost:8000", {
     method: "POST",
     headers: {
@@ -23,13 +24,22 @@ function addContact(firstname, email, phone) {
     },
     body: JSON.stringify({
       firstname,
+      lastname,
       email,
       phone,
+      company,
     }),
   })
-    .then((response) => {
-        $("#formResponse").removeClass("hidden").text("Form Submitted");
-    })
+  .then((response) => {
+    console.log(response)
+    if (response.ok) {
+      $("#formResponse").removeClass("hidden").text("Form Submitted");
+    } else{
+      $("#formResponse")
+        .removeClass("hidden")
+        .text("Error with submission. Please try again");
+          }
+  })
     .catch(error=>{
       $("#formResponse")
         .removeClass("hidden")

@@ -62,7 +62,6 @@
     defer
     src="//js.hs-scripts.com/8612571.js"
   ></script>
-  <!-- End of HubSpot Embed Code -->
   <body>
     <header class="border">
       <h1>Want to partner with us?</h1>
@@ -70,18 +69,18 @@
     </header>
     <main>
       <form id="contactForm" class="border">
-        <label for="firstname">Name:</label>
+        <label for="firstname">First Name:</label>
         <input class='input' type="text" name="firstname" required />
         <label for="lastname">Last Name:</label>
         <input class='input' type="text" name="lastname" required />
         <label for="email">Email Address:</label>
         <input class='input' type="email" name="email" required />
         <label for="phone">Phone Number: </label>
-        <input class='input' type="tel" name="phone" required />
-        <label for="company">Company Name: </label>
+        <input class='input' type="tel" minLength="10" name="phone" required />
+        <label for="company">Company: </label>
         <input class='input' type="text" name="company" required />
         <div class='formButtons'>
-        <button type="submit">Submit</button>
+        <button type="submit" class='disabled'>Submit</button>
         <button id='reset' type="button" >Reset</button>
       </div>
       </form>
